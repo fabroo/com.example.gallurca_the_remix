@@ -75,6 +75,7 @@
         android:layout_height="51dp"
         android:fontFamily="monospace"
         android:text="Guardados"
+        android:onClick="guardados"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="italic"
