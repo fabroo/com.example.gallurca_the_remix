@@ -40,13 +40,13 @@
         app:layout_constraintVertical_bias="0.473" />
 
     <EditText
-        android:id="@+id/registerPsw2"
+        android:id="@+id/registerApodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="44dp"
         android:ems="10"
         android:fontFamily="monospace"
-        android:hint="repeat password"
+        android:hint="apodo"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textStyle="bold"

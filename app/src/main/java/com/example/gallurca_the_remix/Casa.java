@@ -25,12 +25,12 @@ import java.util.Map;
 //import android.support.v7.app.AppCompatActivity;
 
 public class Casa extends AppCompatActivity {
-    TextView timerTxt;
+    private TextView timerTxt;
     private long startTime;
     private FirebaseFirestore db;
     private FirebaseAuth firebaseUser;
     private FirebaseUser user;
-
+    private TextView mainText;
 
     Handler timerHandler = new Handler();
     Runnable timerRunnable = new Runnable() {
@@ -78,9 +78,7 @@ public class Casa extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshots) {
-
                         Toast.makeText(Casa.this, documentSnapshots.get("lastTimes").toString(), Toast.LENGTH_LONG).show();
-
                     }});
     }
     @Override
@@ -91,6 +89,15 @@ public class Casa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_casa);
         timerTxt =  (TextView) findViewById(R.id.timerTxt);
+        mainText = (TextView) findViewById(R.id.mainTxt);
+
+        db.collection("users").document(user.getUid()).get()
+            .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                @Override
+                public void onSuccess(DocumentSnapshot documentSnapshots) {
+                    mainText.setText("El timer de "+documentSnapshots.get("apodo").toString());
+                }});
+
         timerTxt.setText("Press start");
         Button b = (Button) findViewById(R.id.startBtn);
         b.setText("START");
