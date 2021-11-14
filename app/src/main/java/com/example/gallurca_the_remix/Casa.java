@@ -20,6 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 //import android.support.v7.app.AppCompatActivity;
@@ -44,7 +45,7 @@ public class Casa extends AppCompatActivity {
 
             timerTxt.setText(String.format("%d:%02d:%02d", minutes, seconds,millis));
 
-            timerHandler.postDelayed(this, 100);
+            timerHandler.postDelayed(this, 20);
         }
     };
 
@@ -100,19 +101,38 @@ public class Casa extends AppCompatActivity {
 
         timerTxt.setText("Press start");
         Button b = (Button) findViewById(R.id.startBtn);
-        b.setText("START");
+
+        String idioma = Locale.getDefault().getLanguage();
+
+        if(idioma.equals("es")){
+            b.setText("EMPEZAR");
+        }
+        else{
+            b.setText("START");
+        }
+
         b.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Button b = (Button) v;
-                if (b.getText().equals("STOP")) {
+                if (b.getText().equals("STOP") || b.getText().equals("DETENER")) {
                     timerHandler.removeCallbacks(timerRunnable);
-                    b.setText("REINICIAR");
+                    if(idioma.equals("es")){
+                        b.setText("REINCIAR");
+                    }
+                    else{
+                        b.setText("RESTART");
+                    }
                 } else {
                     startTime = System.currentTimeMillis();
                     timerHandler.postDelayed(timerRunnable, 0);
-                    b.setText("STOP");
+                    if(idioma.equals("es")){
+                        b.setText("DETENER");
+                    }
+                    else{
+                        b.setText("STOP");
+                    }
                 }
             }
 
@@ -125,7 +145,13 @@ public class Casa extends AppCompatActivity {
         super.onPause();
         timerHandler.removeCallbacks(timerRunnable);
         Button b = (Button)findViewById(R.id.startBtn);
-        b.setText("START");
+        String idioma = Locale.getDefault().getLanguage();
+        if(idioma.equals("es")){
+            b.setText("START");
+        }
+        else{
+            b.setText("EMPEZAR");
+        }
     }
     public void logout(View view) {
 

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">gallurca_the_remix</string>
+    <string name="title_activity_register">Register</string>
+    <string name="register_instead">O registrarse</string>
+    <string name="hello_world">Hello Square World!</string>
+
+    <string name="login_txt">Logueate</string>
+    <string name="login_btn">Ir</string>
+    <string name="login_psw_hint">Contraseña</string>
+    <string name="login_mail_hint">Email</string>
+
+    <string name="register_mail_hint">Email</string>
+    <string name="register_psw_hint">Contraseña</string>
+    <string name="register_apodo_hint">Apodo</string>
+    <string name="register_txt">Registrate</string>
+    <string name="register_btn">Ir</string>
+    <string name="login_instead">O logearse</string>
+
+    <string name="home_timer_txt">El timer de: </string>
+    <string name="home_timer_start_btn">EMPEZAR</string>
+    <string name="home_timer_save_btn">GUARDAR</string>
+    <string name="home_timer_saved_btn">HISTORIAL</string>
+</resources>
