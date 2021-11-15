@@ -51,25 +51,24 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.667" />
+        app:layout_constraintVertical_bias="0.564" />
 
     <Button
-        android:id="@+id/startBtn2"
+        android:id="@+id/guardarBtn2"
         android:layout_width="146dp"
         android:layout_height="51dp"
         android:fontFamily="monospace"
-        android:onClick="gotoKaruta"
-        android:text="Galletas"
+        android:onClick="guardados"
+        android:text="@string/home_timer_saved_btn"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.978"
-        tools:text="Galletas" />
+        app:layout_constraintVertical_bias="0.769" />
 
     <Button
         android:id="@+id/guardarBtn"
@@ -86,24 +85,25 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.775" />
+        app:layout_constraintVertical_bias="0.672" />
 
     <Button
-        android:id="@+id/guardarBtn2"
-        android:layout_width="146dp"
-        android:layout_height="51dp"
+        android:id="@+id/startBtn2"
+        android:layout_width="307dp"
+        android:layout_height="124dp"
         android:fontFamily="monospace"
-        android:text="@string/home_timer_saved_btn"
-        android:onClick="guardados"
+        android:onClick="gotoKaruta"
+        android:text="@string/karuta_main_txt"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.891" />
+        app:layout_constraintVertical_bias="0.957"
+        tools:text="Galletas" />
 
     <ImageButton
         android:id="@+id/imageButton"

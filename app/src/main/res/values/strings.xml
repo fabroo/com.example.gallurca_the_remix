@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">gallurca_the_remix</string>
     <string name="title_activity_register">Register</string>
     <string name="register_instead">Register instead</string>
@@ -20,6 +21,7 @@
     <string name="home_timer_saved_btn">History</string>
 
     <string name="karuta_roll_btn">Roll</string>
+    <string name="karuta_main_txt">Cookie Roller</string>
 
     <string name="hello_world">Hello Square World!</string>
 </resources>

@@ -19,8 +19,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
-
-
     private static final String MESSAGE = "USER";
 
     @Override
@@ -28,12 +26,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
     public void navigateRegister(View view) {
         Intent intent = new Intent(MainActivity.this, Register.class);
         startActivity(intent);
     }
-        public void login(View view) {
+
+    public void login(View view) {
         mAuth = FirebaseAuth.getInstance();
+
         EditText mailET = findViewById(R.id.loginMail);
         EditText pswET = findViewById(R.id.loginPsw);
 
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("mail", mail);
         Log.d("password", psw);
+
         if (mail.isEmpty() || psw.isEmpty()){
             Toast.makeText(MainActivity.this, "parametros vacios",
                     Toast.LENGTH_LONG).show();

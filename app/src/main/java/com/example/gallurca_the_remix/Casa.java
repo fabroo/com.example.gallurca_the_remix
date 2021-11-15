@@ -91,6 +91,8 @@ public class Casa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         db = FirebaseFirestore.getInstance();
         firebaseUser = FirebaseAuth.getInstance();
+
+
         user = firebaseUser.getCurrentUser();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_casa);

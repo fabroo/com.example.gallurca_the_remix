@@ -22,5 +22,6 @@
     <string name="home_timer_saved_btn">HISTORIAL</string>
 
     <string name="karuta_roll_btn">Tirar</string>
+    <string name="karuta_main_txt">Generador Surtido (╯°□°）╯︵ ┻━┻</string>
 
 </resources>

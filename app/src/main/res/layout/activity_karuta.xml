@@ -36,8 +36,8 @@
 
     <Button
         android:id="@+id/roll_button"
-        android:layout_width="107dp"
-        android:layout_height="65dp"
+        android:layout_width="155dp"
+        android:layout_height="45dp"
         android:text="@string/karuta_roll_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

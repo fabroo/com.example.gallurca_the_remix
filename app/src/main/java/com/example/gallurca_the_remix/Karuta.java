@@ -7,11 +7,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -77,6 +77,7 @@ public class Karuta extends AppCompatActivity {
                                     data.put("quality", quality);
 
                                     db.collection("users").document(user.getUid()).collection("cookies").add(data);
+                                    picname = picname.replaceAll("_"," " );
                                     Toast.makeText(Karuta.this, "Agarraste " + picname + "! Calidad: " + quality +"★", Toast.LENGTH_LONG).show();
                                     flipBack();
                                 }
