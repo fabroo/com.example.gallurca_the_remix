@@ -20,4 +20,7 @@
     <string name="home_timer_start_btn">EMPEZAR</string>
     <string name="home_timer_save_btn">GUARDAR</string>
     <string name="home_timer_saved_btn">HISTORIAL</string>
+
+    <string name="karuta_roll_btn">Tirar</string>
+
 </resources>

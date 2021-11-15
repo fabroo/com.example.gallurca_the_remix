@@ -19,5 +19,7 @@
     <string name="home_timer_save_btn">Save</string>
     <string name="home_timer_saved_btn">History</string>
 
+    <string name="karuta_roll_btn">Roll</string>
+
     <string name="hello_world">Hello Square World!</string>
 </resources>

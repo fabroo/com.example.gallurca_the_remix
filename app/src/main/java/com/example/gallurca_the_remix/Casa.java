@@ -72,6 +72,11 @@ public class Casa extends AppCompatActivity {
 
 
         }
+
+    public void gotoKaruta(View view) {
+        Intent intent = new Intent(Casa.this, Karuta.class);
+        startActivity(intent);
+    }
     public void guardados(View view){
         String uid = user.getUid();
 
@@ -100,6 +105,8 @@ public class Casa extends AppCompatActivity {
                 }});
 
         timerTxt.setText("Press start");
+
+
         Button b = (Button) findViewById(R.id.startBtn);
 
         String idioma = Locale.getDefault().getLanguage();
@@ -137,7 +144,6 @@ public class Casa extends AppCompatActivity {
             }
 
         });
-
     }
 
     @Override
