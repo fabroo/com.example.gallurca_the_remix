@@ -2,7 +2,6 @@ package com.example.gallurca_the_remix;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -40,10 +39,10 @@ public class Register extends AppCompatActivity {
     }
 
     public void registrar(View view){
-        Log.d("msg","inside");
-        System.out.println("aaa");
+
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
+
         EditText mailET = findViewById(R.id.registerMail);
         EditText pswET = findViewById(R.id.registerPsw);
         EditText apodoET = findViewById(R.id.registerApodo);
@@ -58,24 +57,23 @@ public class Register extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
             return;
         }
+
         Map<String, Object> docData = new HashMap<>();
         docData.put("apodo", apodo);
+
         mAuth.createUserWithEmailAndPassword(mail, psw)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
-                            System.out.println("Success!");
-                            String email = user.getEmail();
                             String uid = user.getUid();
-                            Log.d("EL UID ES",uid.toString());
+
                             db.collection("users").document(uid).set(docData)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void aVoid) {
                                             Intent intent = new Intent(Register.this, Casa.class);
-                                            intent.putExtra(MESSAGE, email);
                                             startActivity(intent);
                                         }
                                     });

@@ -54,9 +54,7 @@ public class Karuta extends AppCompatActivity {
             public void onClick(View view){
                 if(caught){
                     caught = false;
-                    Log.d("View", Integer.toString(views.size()));
                     for(ImageView v : views){
-                        Log.d("View", Integer.toString(v.getId()));
                         int random = getRandomNumber(0,images.length);
                         v.setImageResource(images[random]);
                         v.setOnClickListener( new View.OnClickListener(){
